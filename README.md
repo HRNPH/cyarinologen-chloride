@@ -1,4 +1,12 @@
-# Meme-Generator
-hhA Meme generator made using javascript.
+#  cyarinologen-chloride
+## Origin & Importance
+Due to the lack of Charonium which is important for the Charian people just like food for average being,
+normally charian people are able to get the Charonium from The king Characetyl co-A facebookpost.
+we created cyarinologen-chloride for the Charian people, to incease the resource for Charonium.
 
-Link - http://vaithak.meme-generator.surge.sh
+# Contribution - Guidelines
+- Add cyarinologen-chloride AKA: image of king Characetyl co-A to the pcharian folders and named it to an interger number.
+- Add Better description of the cyarinologen-chloride substances to the README.md file.
+- Improve the function of cyarinologen-chloride but I'll not provide guidelines for this. Just read it yourself Lol.
+
+Link - https://hrnph.github.io/cyarinologen-chloride/
