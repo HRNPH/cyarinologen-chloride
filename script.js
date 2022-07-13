@@ -7,11 +7,10 @@ $(document).ready(function() {
     function drawMeme() {
         var img = document.getElementById('start-image');
         var fontSize = parseInt($('#text_font_size').val());
-        var memeSize = parseInt($('#canvas_size').val());
 
         // set form field properties
-        $('#text_top_offset').attr('max', memeSize);
-        $('#text_bottom_offset').attr('max', memeSize);
+        $('#text_top_offset').attr('max', img.height);
+        $('#text_bottom_offset').attr('max', img.height);
 
         // initialize canvas element with desired dimensions
         canvas.width = img.width;
@@ -27,18 +26,19 @@ $(document).ready(function() {
         ctx.fillStyle = 'white';
         ctx.textAlign = 'center';
         var lineHeight = fontSize + parseInt($('#text_line_height').val());
-        var maxTextAreaWidth = memeSize * 0.85;
+        var maxTextAreaWidth = canvas.width * 0.85;
 
         // text 1
         var text1 = $('#text_top').val();
         text1 = text1.toUpperCase();
-        x = memeSize / 2;
+        x = parseInt($('#text_horizon_offset').val());
         y = parseInt($('#text_top_offset').val());
         writeText(ctx, text1, x, y, maxTextAreaWidth, lineHeight);
 
         // text 2
         var text2 = $('#text_bottom').val();
         text2 = text2.toUpperCase();
+        x = parseInt($('#text_bottomhorizon_offset').val());
         y = parseInt($('#text_bottom_offset').val());
         writeText(ctx, text2, x, y, maxTextAreaWidth, lineHeight);
 
@@ -98,8 +98,16 @@ $(document).ready(function() {
         $('#text_top_offset__val').text($(this).val());
         drawMeme();
     });
+    $(document).on('input change', '#text_horizon_offset', function() {
+        $('#text_horizon_offset__val').text($(this).val());
+        drawMeme();
+    });
     $(document).on('input change', '#text_bottom_offset', function() {
         $('#text_bottom_offset__val').text($(this).val());
+        drawMeme();
+    });
+    $(document).on('input change', '#text_bottomhorizon_offset', function() {
+        $('#text_bottomhorizon_offset__val').text($(this).val());
         drawMeme();
     });
     $(document).on('input change', '#text_font_size', function() {

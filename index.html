@@ -72,18 +72,31 @@
                 <!-- Slider for Text-1 offset from top : START -->
                 <div class="form-group">
                     <div class="row">
-                        <label class="control-label col-md-4" for="text_top_offset">Offset from top:</label>
+                        <label class="control-label col-md-4" for="text_top_offset">Vertical:</label>
                         <div class="col-md-6">
-                            <input style="width:100%" id="text_top_offset" type="range" min="0" max="500" value="50" />
+                            <input style="width:100%" id="text_top_offset" type="range" min="0" max="2000" value="50" />
                         </div>
                         <div class="col-md-2 setting-value">
-                            <span id="text_top_offset__val">50</span>px
+                            <span id="text_top_offset__val">Undefinian</span>px
+                        </div>
+                    </div>
+                </div>
+                <!-- horizon -->
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-md-4" for="text_horizon_offset">Horizon:</label>
+                        <div class="col-md-6">
+                            <input style="width:100%" id="text_horizon_offset" type="range" min="0" max="2000" value="50" />
+                        </div>
+                        <div class="col-md-2 setting-value">
+                            <span id="text_horizon_offset__val">Undefinian</span>px
                         </div>
                     </div>
                 </div>
                 <!-- Slider for Text-1 offset from top : END -->
 
                 <p>&nbsp;</p>
+
 
                 <!-- Inputting the bottom text : START -->
                 <label class="control-label" for="text_bottom">Text 2:</label>
@@ -101,6 +114,18 @@
                         </div>
                         <div class="col-md-2 setting-value">
                             <span id="text_bottom_offset__val">450</span>px
+                        </div>
+                    </div>
+                </div>
+                <!-- horizon -->
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-md-4" for="text_bottomhorizon_offset">Offset from Top:</label>
+                        <div class="col-md-6">
+                            <input style="width:100%" id="text_bottomhorizon_offset" type="range" min="0" max="2000" value="450" />
+                        </div>
+                        <div class="col-md-2 setting-value">
+                            <span id="text_bottomhorizon_offset__val">450</span>px
                         </div>
                     </div>
                 </div>
@@ -124,29 +149,15 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <!-- Slider For Meme-Size : START -->
-                                <div class="form-group">
-                                    <div class="row">
-                                        <label class="control-label col-md-3" for="canvas_size">Meme size:</label>
-                                        <div class="col-md-7">
-                                            <input style="width:100%" id="canvas_size" type="range" min="0" max="1000" value="500" />
-                                        </div>
-                                        <div class="col-md-2 setting-value">
-                                            <span id="canvas_size__val">2000</span>px
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Slider For Meme-Size : END -->
-
                                 <!-- Slider For Font Size : START -->
                                 <div class="form-group">
                                     <div class="row">
                                         <label class="control-label col-md-3" for="text_font_size">Font size:</label>
                                         <div class="col-md-7">
-                                            <input style="width:100%" id="text_font_size" type="range" min="0" max="72" value="28" />
+                                            <input style="width:100%" id="text_font_size" type="range" min="0" max="100" value="50" />
                                         </div>
                                         <div class="col-md-2 setting-value">
-                                            <span id="text_font_size__val">28</span>pt
+                                            <span id="text_font_size__val">50</span>pt
                                         </div>
                                     </div>
                                 </div>
