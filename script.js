@@ -7,6 +7,11 @@ $(document).ready(function() {
     function drawMeme() {
         var img = document.getElementById('start-image');
         var fontSize = parseInt($('#text_font_size').val());
+        // check if img is valid
+        if (img.width > 0 && img.height > 0) {} else {
+            $('#start-image').attr('src', `./pcharian/error.jpg`)
+            img = document.getElementById('start-image');
+        }
 
         // set form field properties
         $('#text_top_offset').attr('max', img.height);
@@ -16,8 +21,8 @@ $(document).ready(function() {
         canvas.width = img.width;
         canvas.height = img.height;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        ctx.drawImage(img, 0, 0, img.height * 2, img.width * 2, 0, 0, img.height * 2.1, img.width * 2.1);
+        // catch errors if image is not loaded
+        ctx.drawImage(img, 0, 0, img.height * 2, img.width * 2, 0, 0, img.height * 2.1, img.width * 2.1)
 
         // settings for writing text
         ctx.lineWidth = parseInt($('#text_stroke_width').val());
@@ -85,6 +90,19 @@ $(document).ready(function() {
         }
 
         window.setTimeout(function() { drawMeme() }, 500);
+    });
+
+    // function to change to the image in "pcharian" folder according to the index selected by user
+    $('#imgIndx').change(function() {
+        // get the index of the image
+        var imgIndx = $('#imgIndx').val();
+
+        $('#start-image').attr('src', `./pcharian/${imgIndx}.jpg`);
+
+
+        window.setTimeout(function() {
+            drawMeme()
+        }, 500)
     });
 
     // register event listeners
